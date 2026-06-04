@@ -360,14 +360,14 @@
   max-width: 100%;
   overflow: visible;
   /* Room for phone dropped below TV bottom (top offset + full TV height) */
-  padding-bottom: clamp(56px, 7.5vw, 88px);
+  padding-bottom: clamp(36px, 5vw, 64px);
 }
 
 .site-hero-phone {
   position: absolute;
   right: 0;
-  top: 8%;
-  height: 142%;
+  top: 13%;
+  height: 100%;
   width: auto;
   z-index: 4;
   pointer-events: none;
@@ -796,7 +796,7 @@
 /* Compact row: fixed height, width from aspect ratio (ref: TV + small phones) */
 .site-screens-phones .site-scaled--screen-phone {
   width: auto;
-  height: clamp(260px, 26vw, 340px);
+  height: clamp(350px, 35vw, 460px);
   max-width: none;
 }
 
@@ -1132,13 +1132,13 @@
   .site-hero-devices {
     justify-content: center;
     overflow: visible;
-    padding-bottom: clamp(36px, 5vw, 56px);
+    padding-bottom: clamp(28px, 4vw, 48px);
   }
 
   .site-hero-phone {
     right: 2%;
-    top: 6%;
-    height: 142%;
+    top: 11%;
+    height: 100%;
   }
 
   .site-hero-sub {
@@ -1182,12 +1182,11 @@
 
   .site-hero-phone {
     right: 1%;
-    top: 5%;
-    height: 142%;
+    top: 10%;
   }
 
   .site-screens-phones .site-scaled--screen-phone {
-    height: clamp(220px, 28vw, 280px);
+    height: clamp(300px, 38vw, 380px);
   }
 }
 
@@ -1283,13 +1282,13 @@
   .site-hero-devices {
     margin-top: 8px;
     justify-content: center;
-    padding-bottom: clamp(32px, 4.5vw, 52px);
+    padding-bottom: clamp(24px, 3.5vw, 40px);
   }
 
   .site-hero-phone {
     right: 0;
-    top: 4%;
-    height: 142%;
+    top: 9%;
+    height: 100%;
   }
 
   .site-badge-label {
@@ -1338,7 +1337,7 @@
   }
 
   .site-screens-phones .site-scaled--screen-phone {
-    height: clamp(200px, 42vw, 260px);
+    height: clamp(270px, 56vw, 350px);
   }
 
   .site-screens-tv {
@@ -1406,8 +1405,7 @@
   }
 
   .site-hero-phone {
-    top: 3%;
-    height: 142%;
+    top: 8%;
   }
 
   .site-watch-free-grid {
@@ -1415,6 +1413,6 @@
   }
 
   .site-screens-phones .site-scaled--screen-phone {
-    height: clamp(180px, 48vw, 230px);
+    height: clamp(240px, 62vw, 310px);
   }
 }

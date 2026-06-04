@@ -216,14 +216,24 @@
   );
 }
 
+.site-hero .site-hero-rays.light-rays-container {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  width: auto;
+  height: auto;
+  filter: brightness(1.35) saturate(1.05);
+  opacity: 0.6;
+}
+
 .site-hero-scrim {
   position: absolute;
   inset: 0;
   z-index: -2;
   background: linear-gradient(
     180deg,
-    color-mix(in oklch, var(--background) 55%, transparent) 0%,
-    color-mix(in oklch, var(--background) 80%, transparent) 55%,
+    color-mix(in oklch, var(--background) 50%, transparent) 0%,
+    color-mix(in oklch, var(--background) 78%, transparent) 55%,
     var(--background) 100%
   );
 }
@@ -254,6 +264,8 @@
 }
 
 .site-hero-grid {
+  position: relative;
+  z-index: 1;
   display: grid;
   grid-template-columns: minmax(0, 35%) minmax(0, 1fr);
   gap: 48px;
@@ -348,14 +360,14 @@
   max-width: 100%;
   overflow: visible;
   /* Room for phone dropped below TV bottom (top offset + full TV height) */
-  padding-bottom: clamp(36px, 5vw, 64px);
+  padding-bottom: clamp(56px, 7.5vw, 88px);
 }
 
 .site-hero-phone {
   position: absolute;
   right: 0;
-  top: 13%;
-  height: 100%;
+  top: 8%;
+  height: 142%;
   width: auto;
   z-index: 4;
   pointer-events: none;
@@ -1120,13 +1132,13 @@
   .site-hero-devices {
     justify-content: center;
     overflow: visible;
-    padding-bottom: clamp(28px, 4vw, 48px);
+    padding-bottom: clamp(36px, 5vw, 56px);
   }
 
   .site-hero-phone {
     right: 2%;
-    top: 11%;
-    height: 100%;
+    top: 6%;
+    height: 142%;
   }
 
   .site-hero-sub {
@@ -1170,7 +1182,8 @@
 
   .site-hero-phone {
     right: 1%;
-    top: 10%;
+    top: 5%;
+    height: 142%;
   }
 
   .site-screens-phones .site-scaled--screen-phone {
@@ -1270,13 +1283,13 @@
   .site-hero-devices {
     margin-top: 8px;
     justify-content: center;
-    padding-bottom: clamp(24px, 3.5vw, 40px);
+    padding-bottom: clamp(32px, 4.5vw, 52px);
   }
 
   .site-hero-phone {
     right: 0;
-    top: 9%;
-    height: 100%;
+    top: 4%;
+    height: 142%;
   }
 
   .site-badge-label {
@@ -1393,7 +1406,8 @@
   }
 
   .site-hero-phone {
-    top: 8%;
+    top: 3%;
+    height: 142%;
   }
 
   .site-watch-free-grid {

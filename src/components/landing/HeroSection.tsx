@@ -1,3 +1,4 @@
+import LightRays from "@/components/effects/LightRays"
 import { ScaledFrame } from "@/components/shared/ScaledFrame"
 import { StoreBadge } from "@/components/shared/StoreBadge"
 import { siteLinks } from "@/config/site-links"
@@ -7,6 +8,19 @@ export function HeroSection() {
     <header className="site-hero">
       <div className="site-hero-bg" aria-hidden />
       <div className="site-hero-scrim" aria-hidden />
+      <LightRays
+        className="site-hero-rays"
+        raysOrigin="top-center"
+        raysColor="#4f52b8"
+        raysSpeed={1.5}
+        lightSpread={1.9}
+        rayLength={1.4}
+        fadeDistance={1.1}
+        followMouse
+        mouseInfluence={0.1}
+        noiseAmount={0.06}
+        distortion={0.05}
+      />
       <div className="halftone-fine site-hero-dots" aria-hidden />
       <div className="site-hero-kanji site-jp" aria-hidden>
         動

@@ -1,11 +1,11 @@
 import type { LucideIcon } from "lucide-react"
-import { Download, Play, Tv } from "lucide-react"
+import { Download, Smartphone, Tv } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 
 const iconMap = {
   tv: Tv,
-  play: Play,
+  mobile: Smartphone,
   download: Download,
 } as const
 
@@ -14,6 +14,8 @@ type StoreBadgeProps = {
   kicker: string
   label: string
   href?: string
+  /** Suggested filename when the browser saves the linked file. */
+  download?: string
   primary?: boolean
   className?: string
 }
@@ -23,6 +25,7 @@ export function StoreBadge({
   kicker,
   label,
   href = "#download",
+  download,
   primary = false,
   className,
 }: StoreBadgeProps) {
@@ -31,6 +34,7 @@ export function StoreBadge({
   return (
     <a
       href={href}
+      download={download}
       className={cn("site-badge", className)}
       data-primary={primary ? "1" : "0"}
     >

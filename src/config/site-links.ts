@@ -1,11 +1,8 @@
 export const siteLinks = {
-  playStoreTv: "#",
-  playStoreMobile: "#",
-  apkTv: "#",
-  apkMobile: "#",
-  support: "#",
-  privacy: "#",
-  about: "#",
+  apkTv: "/downloads/tv-release.apk",
+  apkMobile: "/downloads/mobile-release.apk",
+  privacy: "/privacy",
+  terms: "/terms",
 } as const
 
 export const appMeta = {

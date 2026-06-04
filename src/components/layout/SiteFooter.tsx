@@ -1,6 +1,5 @@
 import { WordLogo } from "@/components/brand/Logo"
 import { footerColumns } from "@/config/site-content"
-import { siteLinks } from "@/config/site-links"
 
 export function SiteFooter() {
   return (
@@ -16,21 +15,11 @@ export function SiteFooter() {
           {footerColumns.map((column) => (
             <div key={column.title}>
               <span className="site-footer-h">{column.title}</span>
-              {column.links.map((link) => {
-                const href =
-                  link.label === "Support"
-                    ? siteLinks.support
-                    : link.label === "Privacy"
-                      ? siteLinks.privacy
-                      : link.label === "About"
-                        ? siteLinks.about
-                        : link.href
-                return (
-                  <a key={link.label} href={href}>
-                    {link.label}
-                  </a>
-                )
-              })}
+              {column.links.map((link) => (
+                <a key={link.label} href={link.href}>
+                  {link.label}
+                </a>
+              ))}
             </div>
           ))}
         </div>

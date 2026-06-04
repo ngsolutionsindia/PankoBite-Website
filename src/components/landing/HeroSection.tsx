@@ -1,5 +1,3 @@
-import { Star } from "lucide-react"
-
 import { ScaledFrame } from "@/components/shared/ScaledFrame"
 import { StoreBadge } from "@/components/shared/StoreBadge"
 import { siteLinks } from "@/config/site-links"
@@ -35,33 +33,21 @@ export function HeroSection() {
           <div className="site-hero-ctas">
             <StoreBadge
               icon="tv"
-              kicker="DOWNLOAD FOR"
-              label="Android TV"
-              href={siteLinks.playStoreTv}
+              kicker="SIDELOAD"
+              label="Android TV APK"
+              href={siteLinks.apkTv}
+              download="tv-release.apk"
               primary
             />
             <StoreBadge
-              icon="play"
-              kicker="GET IT ON"
-              label="Google Play"
-              href={siteLinks.playStoreMobile}
+              icon="mobile"
+              kicker="SIDELOAD"
+              label="Mobile APK"
+              href={siteLinks.apkMobile}
+              download="mobile-release.apk"
             />
           </div>
           <div className="site-hero-meta">
-            <span>
-              <Star
-                className="size-[15px] fill-accent text-accent"
-                aria-hidden
-              />
-              4.9 · 60K ratings
-            </span>
-            <span className="dot" aria-hidden>
-              ·
-            </span>
-            <span>12,000+ episodes</span>
-            <span className="dot" aria-hidden>
-              ·
-            </span>
             <span>No ads on the story</span>
           </div>
         </div>
@@ -73,15 +59,35 @@ export function HeroSection() {
             variant="hero-tv"
             label="Android TV — Home"
             className="site-device-frame site-device-frame--tv"
-          />
+          >
+            <img
+              src="/screenshots/tv-home.png"
+              alt="Android TV — Home"
+              width={1920}
+              height={1080}
+              className="site-device-screenshot"
+              loading="eager"
+              decoding="async"
+            />
+          </ScaledFrame>
           <div className="site-hero-phone">
             <ScaledFrame
-              width={390}
-              height={844}
+              width={1344}
+              height={2992}
               variant="hero-phone"
               label="Mobile — Home"
               className="site-device-frame site-device-frame--phone"
-            />
+            >
+              <img
+                src="/screenshots/mobile-home.png"
+                alt="Mobile — Home"
+                width={1344}
+                height={2992}
+                className="site-device-screenshot"
+                loading="eager"
+                decoding="async"
+              />
+            </ScaledFrame>
           </div>
         </div>
       </div>

@@ -1,6 +1,6 @@
 import { ScaledFrame } from "@/components/shared/ScaledFrame"
 import { SectionHeader } from "@/components/shared/SectionHeader"
-import { mobileScreens } from "@/config/site-content"
+import { mobileScreens, tvDetailScreen } from "@/config/site-content"
 
 export function ScreensSection() {
   return (
@@ -15,25 +15,47 @@ export function ScreensSection() {
 
         <div className="site-screens-tv">
           <ScaledFrame
-            width={1920}
-            height={1080}
+            width={tvDetailScreen.width}
+            height={tvDetailScreen.height}
             variant="screen-tv"
-            label="Android TV — Detail & episodes"
+            label={tvDetailScreen.alt}
             className="site-device-frame site-device-frame--tv"
-          />
-          <span className="site-screens-cap site-mono">ANDROID TV · DETAIL</span>
+          >
+            <img
+              src={tvDetailScreen.src}
+              alt={tvDetailScreen.alt}
+              width={tvDetailScreen.width}
+              height={tvDetailScreen.height}
+              className="site-device-screenshot"
+              loading="lazy"
+              decoding="async"
+            />
+          </ScaledFrame>
+          <span className="site-screens-cap site-mono">
+            {tvDetailScreen.caption}
+          </span>
         </div>
 
         <div className="site-screens-phones">
           {mobileScreens.map((screen) => (
             <div key={screen.label} className="site-screens-phone-item">
               <ScaledFrame
-                width={390}
-                height={844}
+                width={screen.width}
+                height={screen.height}
                 variant="screen-phone"
-                label={`Mobile — ${screen.label}`}
-                className="site-device-frame site-device-frame--phone"
-              />
+                label={screen.alt}
+                className="site-device-frame site-device-frame--phone site-device-frame--screens-phone"
+              >
+                <img
+                  src={screen.src}
+                  alt={screen.alt}
+                  width={screen.width}
+                  height={screen.height}
+                  className="site-device-screenshot site-device-screenshot--blend"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </ScaledFrame>
               <span className="site-screens-cap site-mono">{screen.label}</span>
             </div>
           ))}

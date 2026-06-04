@@ -22,12 +22,9 @@ export function PlatformsSection() {
         <div className="site-plat-grid">
           {platformCards.map((platform) => {
             const Icon = platformIcons[platform.id]
-            const playHref =
-              platform.id === "tv"
-                ? siteLinks.playStoreTv
-                : siteLinks.playStoreMobile
-            const apkHref =
-              platform.id === "tv" ? siteLinks.apkTv : siteLinks.apkMobile
+            const isTv = platform.id === "tv"
+            const apkHref = isTv ? siteLinks.apkTv : siteLinks.apkMobile
+            const apkDownload = isTv ? "tv-release.apk" : "mobile-release.apk"
 
             return (
               <div key={platform.id} className="site-plat-card">
@@ -54,17 +51,12 @@ export function PlatformsSection() {
                 </ul>
                 <div className="site-plat-ctas">
                   <StoreBadge
-                    icon="play"
-                    kicker={platform.playStoreKicker}
-                    label={platform.playStoreLabel}
-                    href={playHref}
-                    primary
-                  />
-                  <StoreBadge
-                    icon="download"
+                    icon={platform.id === "tv" ? "tv" : "mobile"}
                     kicker={platform.apkKicker}
                     label={platform.apkLabel}
                     href={apkHref}
+                    download={apkDownload}
+                    primary
                   />
                 </div>
               </div>

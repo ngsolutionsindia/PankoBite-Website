@@ -39,13 +39,8 @@ export function ScaledFrame({
         height: height * scale,
       }
 
-  const innerStyle: CSSProperties = useResponsiveScale
-    ? {
-        width,
-        height,
-        transform: "scale(var(--scale))",
-        transformOrigin: "top left",
-      }
+  const innerStyle: CSSProperties | undefined = useResponsiveScale
+    ? undefined
     : {
         width,
         height,
@@ -69,7 +64,10 @@ export function ScaledFrame({
           : outerStyle
       }
     >
-      <div className="site-scaled-inner" style={innerStyle}>
+      <div
+        className="site-scaled-inner"
+        style={innerStyle}
+      >
         {children ?? (
           <PlaceholderImage
             label={label}

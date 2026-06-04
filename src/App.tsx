@@ -1,13 +1,28 @@
+import { useSyncExternalStore } from "react"
+
 import { SiteFooter } from "@/components/layout/SiteFooter"
 import { SiteHeader } from "@/components/layout/SiteHeader"
 import { CtaSection } from "@/components/landing/CtaSection"
 import { FeaturesSection } from "@/components/landing/FeaturesSection"
 import { HeroSection } from "@/components/landing/HeroSection"
 import { LibrarySection } from "@/components/landing/LibrarySection"
+import { WatchFreeSection } from "@/components/landing/WatchFreeSection"
 import { PlatformsSection } from "@/components/landing/PlatformsSection"
 import { ScreensSection } from "@/components/landing/ScreensSection"
+import { pathnameToRoute } from "@/lib/routes"
+import { PrivacyPage } from "@/pages/PrivacyPage"
+import { TermsPage } from "@/pages/TermsPage"
 
-export function App() {
+function subscribeToPathname(onStoreChange: () => void) {
+  window.addEventListener("popstate", onStoreChange)
+  return () => window.removeEventListener("popstate", onStoreChange)
+}
+
+function getPathnameSnapshot() {
+  return window.location.pathname
+}
+
+function LandingPage() {
   return (
     <>
       <a
@@ -19,6 +34,7 @@ export function App() {
       <SiteHeader />
       <main id="main-content">
         <HeroSection />
+        <WatchFreeSection />
         <LibrarySection />
         <FeaturesSection />
         <ScreensSection />
@@ -28,6 +44,19 @@ export function App() {
       <SiteFooter />
     </>
   )
+}
+
+export function App() {
+  const pathname = useSyncExternalStore(
+    subscribeToPathname,
+    getPathnameSnapshot,
+    () => "/",
+  )
+  const route = pathnameToRoute(pathname)
+
+  if (route === "privacy") return <PrivacyPage />
+  if (route === "terms") return <TermsPage />
+  return <LandingPage />
 }
 
 export default App

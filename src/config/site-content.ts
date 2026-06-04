@@ -1,10 +1,35 @@
 import type { LucideIcon } from "lucide-react"
+
+import { siteLinks } from "@/config/site-links"
 import {
   Captions,
   Grid3x3,
   MonitorSmartphone,
   Zap,
 } from "lucide-react"
+
+export const watchFreeCards = [
+  {
+    labelJa: "広告なし",
+    title: "No ads.",
+    description: "Ever. Not even a banner.",
+  },
+  {
+    labelJa: "登録不要",
+    title: "No sign-in.",
+    description: "Just open and watch.",
+  },
+  {
+    labelJa: "無料",
+    title: "100% free.",
+    description: "No trial. No credit card.",
+  },
+  {
+    labelJa: "制限なし",
+    title: "No limits.",
+    description: "Full episodes, full quality.",
+  },
+] as const
 
 export const navLinks = [
   { label: "Features", href: "#features" },
@@ -163,10 +188,8 @@ export const platformCards = [
       "4K · HEVC playback",
       "Cinematic focus browsing",
     ],
-    playStoreKicker: "GET IT ON",
-    playStoreLabel: "Play Store (TV)",
-    apkKicker: "OR SIDELOAD",
-    apkLabel: "APK · v2.4.1",
+    apkKicker: "SIDELOAD",
+    apkLabel: "TV APK",
   },
   {
     id: "mobile" as const,
@@ -179,10 +202,8 @@ export const platformCards = [
       "Background & PiP playback",
       "Syncs with your TV",
     ],
-    playStoreKicker: "GET IT ON",
-    playStoreLabel: "Google Play",
-    apkKicker: "OR SIDELOAD",
-    apkLabel: "APK · v2.4.1",
+    apkKicker: "SIDELOAD",
+    apkLabel: "Mobile APK",
   },
 ] as const
 
@@ -198,24 +219,54 @@ export const footerColumns = [
   {
     title: "Download",
     links: [
-      { label: "Android TV", href: "#download" },
-      { label: "Google Play", href: "#download" },
-      { label: "APK (sideload)", href: "#download" },
+      { label: "TV APK (sideload)", href: siteLinks.apkTv },
+      { label: "Mobile APK (sideload)", href: siteLinks.apkMobile },
     ],
   },
   {
-    title: "Company",
+    title: "Legal",
     links: [
-      { label: "About", href: "#" },
-      { label: "Support", href: "#" },
-      { label: "Privacy", href: "#" },
+      { label: "Terms", href: "/terms" },
+      { label: "Privacy", href: "/privacy" },
     ],
   },
 ] as const
 
+export const tvDetailScreen = {
+  src: "/screenshots/tv-animedetail.png",
+  width: 1920,
+  height: 1080,
+  alt: "Android TV — Anime detail & episodes",
+  caption: "ANDROID TV · DETAIL",
+} as const
+
 export const mobileScreens = [
-  { label: "HOME", ratio: 390 / 844 },
-  { label: "DETAIL", ratio: 390 / 844 },
-  { label: "PLAYER", ratio: 390 / 844 },
-  { label: "PROFILE", ratio: 390 / 844 },
+  {
+    label: "HOME",
+    src: "/screenshots/mobile-home.png",
+    width: 1344,
+    height: 2992,
+    alt: "Mobile — Home",
+  },
+  {
+    label: "SEARCH",
+    src: "/screenshots/mobile-search.png",
+    width: 1344,
+    height: 2992,
+    alt: "Mobile — Search",
+  },
+  {
+    label: "DETAIL",
+    src: "/screenshots/mobile-animedetail.png",
+    width: 1344,
+    height: 2992,
+    alt: "Mobile — Anime detail",
+  },
+  {
+    label: "SCHEDULE",
+    src: "/screenshots/mobile-schedule.png",
+    width: 1344,
+    height: 2992,
+    alt: "Mobile — Weekly schedule",
+  },
 ] as const

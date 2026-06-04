@@ -12,6 +12,9 @@ dist
 dist-ssr
 *.local
 
+# Large APK binaries (copied from repo root before deploy)
+public/downloads/*.apk
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

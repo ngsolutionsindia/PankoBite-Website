@@ -8,9 +8,9 @@ export const appMeta = {
   minApi: 28,
 } as const
 
-/** GitHub Releases on ngsolutionsindia/NgAnime (see scripts/create-github-release.ps1). */
-const apkReleaseTag = `v${appMeta.versionName}`;
-const apkReleaseBase = `https://github.com/ngsolutionsindia/NgAnime/releases/download/${apkReleaseTag}`;
+/** Public APK host — ngsolutionsindia/NGAnime-releases (see scripts/create-github-release.ps1). */
+const apkReleaseTag = `v${appMeta.versionName}`
+const apkReleaseBase = `https://github.com/ngsolutionsindia/NGAnime-releases/releases/download/${apkReleaseTag}`
 
 export const siteLinks = {
   apkTv: `${apkReleaseBase}/tv-release.apk`,

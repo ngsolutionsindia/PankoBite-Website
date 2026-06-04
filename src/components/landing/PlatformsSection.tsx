@@ -3,7 +3,7 @@ import { Check, Smartphone, Tv } from "lucide-react"
 import { SectionHeader } from "@/components/shared/SectionHeader"
 import { StoreBadge } from "@/components/shared/StoreBadge"
 import { platformCards } from "@/config/site-content"
-import { siteLinks } from "@/config/site-links"
+import { apkDownloads } from "@/config/site-links"
 
 const platformIcons = {
   tv: Tv,
@@ -23,8 +23,7 @@ export function PlatformsSection() {
           {platformCards.map((platform) => {
             const Icon = platformIcons[platform.id]
             const isTv = platform.id === "tv"
-            const apkHref = isTv ? siteLinks.apkTv : siteLinks.apkMobile
-            const apkDownload = isTv ? "tv-release.apk" : "mobile-release.apk"
+            const apk = isTv ? apkDownloads.tv : apkDownloads.mobile
 
             return (
               <div key={platform.id} className="site-plat-card">
@@ -53,9 +52,9 @@ export function PlatformsSection() {
                   <StoreBadge
                     icon={platform.id === "tv" ? "tv" : "mobile"}
                     kicker={platform.apkKicker}
-                    label={platform.apkLabel}
-                    href={apkHref}
-                    download={apkDownload}
+                    label={apk.label}
+                    href={apk.href}
+                    download={apk.filename}
                     primary
                   />
                 </div>

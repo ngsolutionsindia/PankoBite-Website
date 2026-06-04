@@ -1,6 +1,6 @@
 import type { LucideIcon } from "lucide-react"
 
-import { siteLinks } from "@/config/site-links"
+import { apkDownloads, appMeta } from "@/config/site-links"
 import {
   Captions,
   Grid3x3,
@@ -219,8 +219,8 @@ export const footerColumns = [
   {
     title: "Download",
     links: [
-      { label: "TV APK (sideload)", href: siteLinks.apkTv },
-      { label: "Mobile APK (sideload)", href: siteLinks.apkMobile },
+      { label: `TV APK v${appMeta.versionName} (sideload)`, href: apkDownloads.tv.href },
+      { label: `Mobile APK v${appMeta.versionName} (sideload)`, href: apkDownloads.mobile.href },
     ],
   },
   {

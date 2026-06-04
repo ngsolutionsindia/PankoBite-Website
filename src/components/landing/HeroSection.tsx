@@ -1,7 +1,7 @@
 import LightRays from "@/components/effects/LightRays"
 import { ScaledFrame } from "@/components/shared/ScaledFrame"
 import { StoreBadge } from "@/components/shared/StoreBadge"
-import { siteLinks } from "@/config/site-links"
+import { apkDownloads } from "@/config/site-links"
 
 export function HeroSection() {
   return (
@@ -48,17 +48,17 @@ export function HeroSection() {
             <StoreBadge
               icon="tv"
               kicker="SIDELOAD"
-              label="Android TV APK"
-              href={siteLinks.apkTv}
-              download="tv-release.apk"
+              label={apkDownloads.tv.label}
+              href={apkDownloads.tv.href}
+              download={apkDownloads.tv.filename}
               primary
             />
             <StoreBadge
               icon="mobile"
               kicker="SIDELOAD"
-              label="Mobile APK"
-              href={siteLinks.apkMobile}
-              download="mobile-release.apk"
+              label={apkDownloads.mobile.label}
+              href={apkDownloads.mobile.href}
+              download={apkDownloads.mobile.filename}
             />
           </div>
           <div className="site-hero-meta">

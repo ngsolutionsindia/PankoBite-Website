@@ -11,6 +11,9 @@ node_modules
 dist
 dist-ssr
 *.local
+.env
+.env.local
+.env.*.local
 
 # Large APK binaries (copied from repo root before deploy)
 public/downloads/*.apk

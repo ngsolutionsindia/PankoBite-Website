@@ -1,6 +1,11 @@
 import type { LucideIcon } from "lucide-react"
 import { Download, Smartphone, Tv } from "lucide-react"
 
+import {
+  trackAppDownload,
+  type AppDownloadPlacement,
+  type AppDownloadVariant,
+} from "@/lib/analytics"
 import { cn } from "@/lib/utils"
 
 const iconMap = {
@@ -16,6 +21,8 @@ type StoreBadgeProps = {
   href?: string
   /** Suggested filename when the browser saves the linked file. */
   download?: string
+  appVariant?: AppDownloadVariant
+  placement?: AppDownloadPlacement
   primary?: boolean
   className?: string
 }
@@ -26,6 +33,8 @@ export function StoreBadge({
   label,
   href = "#download",
   download,
+  appVariant,
+  placement,
   primary = false,
   className,
 }: StoreBadgeProps) {
@@ -37,6 +46,11 @@ export function StoreBadge({
       download={download}
       className={cn("site-badge", className)}
       data-primary={primary ? "1" : "0"}
+      onClick={() => {
+        if (appVariant && placement) {
+          void trackAppDownload(appVariant, placement)
+        }
+      }}
     >
       <Icon
         className={cn(

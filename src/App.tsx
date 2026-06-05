@@ -1,4 +1,6 @@
-import { useSyncExternalStore } from "react"
+import { useEffect, useSyncExternalStore } from "react"
+
+import { trackPageView } from "@/lib/analytics"
 
 import { SiteFooter } from "@/components/layout/SiteFooter"
 import { SiteHeader } from "@/components/layout/SiteHeader"
@@ -53,6 +55,10 @@ export function App() {
     () => "/",
   )
   const route = pathnameToRoute(pathname)
+
+  useEffect(() => {
+    void trackPageView(route)
+  }, [route])
 
   if (route === "privacy") return <PrivacyPage />
   if (route === "terms") return <TermsPage />

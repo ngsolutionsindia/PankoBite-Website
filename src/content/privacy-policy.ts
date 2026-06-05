@@ -43,6 +43,7 @@ export const privacyPolicySections: LegalSection[] = [
     title: "5. This website",
     paragraphs: [
       "This site is primarily informational (app description, download links, and legal documents). We do not use sign-in on this site.",
+      "We use Firebase Analytics (Google) on this website to measure aggregate traffic (page views) and when visitors click APK download links (which variant was chosen and which section of the page). This helps us understand how the site is used. Analytics does not require an account and is configured for the website only; it is separate from data stored inside the NG Anime app on your device.",
       "If the site is hosted by a provider (for example a static host or CDN), that provider may process technical logs (IP address, browser type, requested URL, timestamps) for security and delivery. We use that information only for operating and protecting the site, not for selling personal data.",
     ],
   },

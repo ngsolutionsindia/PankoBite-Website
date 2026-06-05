@@ -27,6 +27,8 @@ export function CtaSection() {
             label={apkDownloads.tv.label}
             href={apkDownloads.tv.href}
             download={apkDownloads.tv.filename}
+            appVariant="tv"
+            placement="cta"
             primary
           />
           <StoreBadge
@@ -35,6 +37,8 @@ export function CtaSection() {
             label={apkDownloads.mobile.label}
             href={apkDownloads.mobile.href}
             download={apkDownloads.mobile.filename}
+            appVariant="mobile"
+            placement="cta"
           />
         </div>
       </div>

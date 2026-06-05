@@ -51,6 +51,8 @@ export function HeroSection() {
               label={apkDownloads.tv.label}
               href={apkDownloads.tv.href}
               download={apkDownloads.tv.filename}
+              appVariant="tv"
+              placement="hero"
               primary
             />
             <StoreBadge
@@ -59,6 +61,8 @@ export function HeroSection() {
               label={apkDownloads.mobile.label}
               href={apkDownloads.mobile.href}
               download={apkDownloads.mobile.filename}
+              appVariant="mobile"
+              placement="hero"
             />
           </div>
           <div className="site-hero-meta">

@@ -55,6 +55,8 @@ export function PlatformsSection() {
                     label={apk.label}
                     href={apk.href}
                     download={apk.filename}
+                    appVariant={isTv ? "tv" : "mobile"}
+                    placement="platforms"
                     primary
                   />
                 </div>

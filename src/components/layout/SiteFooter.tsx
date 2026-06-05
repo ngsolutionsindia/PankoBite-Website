@@ -1,5 +1,7 @@
 import { WordLogo } from "@/components/brand/Logo"
 import { footerColumns } from "@/config/site-content"
+import { apkDownloads } from "@/config/site-links"
+import { trackAppDownload } from "@/lib/analytics"
 
 export function SiteFooter() {
   return (
@@ -16,7 +18,17 @@ export function SiteFooter() {
             <div key={column.title}>
               <span className="site-footer-h">{column.title}</span>
               {column.links.map((link) => (
-                <a key={link.label} href={link.href}>
+                <a
+                  key={link.label}
+                  href={link.href}
+                  onClick={() => {
+                    if (link.href === apkDownloads.tv.href) {
+                      void trackAppDownload("tv", "footer")
+                    } else if (link.href === apkDownloads.mobile.href) {
+                      void trackAppDownload("mobile", "footer")
+                    }
+                  }}
+                >
                   {link.label}
                 </a>
               ))}

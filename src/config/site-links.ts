@@ -2,8 +2,8 @@
 export const appMeta = {
   name: "NG Anime",
   packageId: "com.ngsolutions.nganime",
-  versionName: "1.0",
-  versionCode: 1,
+  versionName: "1.1",
+  versionCode: 2,
   minAndroid: "Android 9+",
   minApi: 28,
 } as const

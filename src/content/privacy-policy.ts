@@ -30,8 +30,16 @@ export const privacyPolicySections: LegalSection[] = [
     ],
   },
   {
+    id: "analytics",
+    title: "4. App analytics (Firebase)",
+    paragraphs: [
+      "We use Firebase Analytics (Google) in the NG Anime mobile and Android TV apps to measure aggregate product usage, such as first opens (installs), active users, session duration, screens viewed, and app version. This helps us understand how the apps are used and improve them. Analytics does not require sign-in and is separate from your on-device watch history and lists.",
+      "Mobile and TV builds are distinguished in reports using an app variant label (mobile or tv). We do not use Firebase Analytics to show ads inside NG Anime.",
+    ],
+  },
+  {
     id: "network",
-    title: "4. Network requests to third parties",
+    title: "5. Network requests to third parties",
     paragraphs: [
       legalMeta.thirdPartyDisclosure,
       "When you search, browse, or stream, the app sends requests over the internet to independent third-party services (including catalog/metadata APIs and streaming endpoints). Those requests may include information such as search terms, title identifiers, episode numbers, user-agent strings, and standard HTTP metadata required for the request to work.",
@@ -40,51 +48,51 @@ export const privacyPolicySections: LegalSection[] = [
   },
   {
     id: "website",
-    title: "5. This website",
+    title: "6. This website",
     paragraphs: [
       "This site is primarily informational (app description, download links, and legal documents). We do not use sign-in on this site.",
-      "We use Firebase Analytics (Google) on this website to measure aggregate traffic (page views) and when visitors click APK download links (which variant was chosen and which section of the page). This helps us understand how the site is used. Analytics does not require an account and is configured for the website only; it is separate from data stored inside the NG Anime app on your device.",
+      "We use Firebase Analytics (Google) on this website to measure aggregate traffic (page views) and when visitors click APK download links (which variant was chosen and which section of the page). The mobile and TV apps use the same Firebase project for aggregate app usage metrics (see section 4). Analytics does not require an account.",
       "If the site is hosted by a provider (for example a static host or CDN), that provider may process technical logs (IP address, browser type, requested URL, timestamps) for security and delivery. We use that information only for operating and protecting the site, not for selling personal data.",
     ],
   },
   {
     id: "no-sale",
-    title: "6. We do not sell your personal information",
+    title: "7. We do not sell your personal information",
     paragraphs: [
-      "We do not sell, rent, or trade personal information to data brokers. We do not run in-app advertising networks or behavioral ad tracking in NG Anime as distributed by us.",
+      "We do not sell, rent, or trade personal information to data brokers. We do not run in-app advertising networks in NG Anime as distributed by us. Firebase Analytics (sections 4 and 6) is used for product metrics, not to serve third-party ads in the app or on this site.",
     ],
   },
   {
     id: "children",
-    title: "7. Children",
+    title: "8. Children",
     paragraphs: [
       "NG Anime is not directed at children under 13 (or the minimum age required in your region). We do not knowingly collect personal information from children. If you believe a child has provided us personal information, contact us and we will take reasonable steps to delete it.",
     ],
   },
   {
     id: "security",
-    title: "8. Security",
+    title: "9. Security",
     paragraphs: [
       "We apply reasonable measures for a small client application, but no method of transmission or storage is completely secure. Use the app at your own risk.",
     ],
   },
   {
     id: "rights",
-    title: "9. Your choices and rights",
+    title: "10. Your choices and rights",
     paragraphs: [
       "You can delete local app data through your device settings. Depending on where you live, you may have rights to access, correct, or delete personal information we hold about you (typically limited to information you send us directly, such as support correspondence). Contact us using the email below.",
     ],
   },
   {
     id: "changes",
-    title: "10. Changes",
+    title: "11. Changes",
     paragraphs: [
       "We may update this Privacy Policy from time to time. The “Last updated” date at the top will change when we do. Continued use of the app or site after changes means you accept the updated policy.",
     ],
   },
   {
     id: "contact",
-    title: "11. Contact",
+    title: "12. Contact",
     paragraphs: [
       "Questions about this policy: email us at the address in the footer of this page.",
     ],

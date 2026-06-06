@@ -34,6 +34,7 @@ export function initFirebaseAnalytics(): Promise<Analytics | null> {
     if (!(await isSupported())) return null
     app = initializeApp(firebaseConfig)
     analytics = getAnalytics(app)
+    enableDebugModeIfRequested()
     return analytics
   })()
 
@@ -42,4 +43,14 @@ export function initFirebaseAnalytics(): Promise<Analytics | null> {
 
 export function getFirebaseAnalytics(): Analytics | null {
   return analytics
+}
+
+function enableDebugModeIfRequested() {
+  const fromEnv = import.meta.env.VITE_FIREBASE_ANALYTICS_DEBUG === "true"
+  const fromUrl = globalThis.location?.search.includes("firebase_analytics_debug=1")
+  if (!fromEnv && !fromUrl) return
+  if (!firebaseConfig.measurementId) return
+
+  const gtag = (globalThis as { gtag?: (...args: unknown[]) => void }).gtag
+  gtag?.("config", firebaseConfig.measurementId, { debug_mode: true })
 }

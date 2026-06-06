@@ -2,7 +2,7 @@ import type { LucideIcon } from "lucide-react"
 import { Download, Smartphone, Tv } from "lucide-react"
 
 import {
-  trackAppDownload,
+  followDownloadLink,
   type AppDownloadPlacement,
   type AppDownloadVariant,
 } from "@/lib/analytics"
@@ -46,9 +46,9 @@ export function StoreBadge({
       download={download}
       className={cn("site-badge", className)}
       data-primary={primary ? "1" : "0"}
-      onClick={() => {
-        if (appVariant && placement) {
-          void trackAppDownload(appVariant, placement)
+      onClick={(event) => {
+        if (appVariant && placement && href) {
+          followDownloadLink(event, href, appVariant, placement)
         }
       }}
     >

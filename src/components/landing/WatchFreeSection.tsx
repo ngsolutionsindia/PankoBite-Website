@@ -24,7 +24,7 @@ export function WatchFreeSection() {
           <p className="site-watch-free-foot site-mono">JUST PRESS PLAY.</p>
         </div>
 
-        <ul className="site-watch-free-grid" aria-label="Why NG Anime is free">
+        <ul className="site-watch-free-grid" aria-label="Why PankoBite is free">
           {watchFreeCards.map((card) => (
             <li key={card.title} className="site-watch-free-card">
               <span className="site-watch-free-card-check" aria-hidden>

@@ -4,21 +4,21 @@ import { legalMeta } from "@/config/legal-meta"
 export const privacyPolicyTitle = "Privacy Policy"
 
 export const privacyPolicyIntro =
-  "This Privacy Policy explains how NG Solutions (“we”, “us”, “our”) handles information in connection with the NG Anime mobile and Android TV applications and this website. NG Anime is a third-party client: we do not operate the streaming services or host the anime catalog."
+  "This Privacy Policy explains how we (“we”, “us”, “our”) handle information in connection with the PankoBite mobile and Android TV applications and this website. PankoBite is a third-party client: we do not operate the streaming services or host the anime catalog."
 
 export const privacyPolicySections: LegalSection[] = [
   {
     id: "scope",
     title: "1. Scope",
     paragraphs: [
-      "This policy applies to the NG Anime apps (Android mobile and Android TV) and the promotional website at which you are reading it. It does not govern third-party websites, APIs, CDNs, or video hosts that the app contacts when you browse or play content.",
+      "This policy applies to the PankoBite apps (Android mobile and Android TV) and the promotional website at which you are reading it. It does not govern third-party websites, APIs, CDNs, or video hosts that the app contacts when you browse or play content.",
     ],
   },
   {
     id: "no-accounts",
     title: "2. No accounts or central profiles",
     paragraphs: [
-      "NG Anime does not require sign-in. We do not run a user account system and we do not maintain a central server database of your identity, email, or password for the app.",
+      "PankoBite does not require sign-in. We do not run a user account system and we do not maintain a central server database of your identity, email, or password for the app.",
     ],
   },
   {
@@ -33,8 +33,8 @@ export const privacyPolicySections: LegalSection[] = [
     id: "analytics",
     title: "4. App analytics (Firebase)",
     paragraphs: [
-      "We use Firebase Analytics (Google) in the NG Anime mobile and Android TV apps to measure aggregate product usage, such as first opens (installs), active users, session duration, screens viewed, and app version. This helps us understand how the apps are used and improve them. Analytics does not require sign-in and is separate from your on-device watch history and lists.",
-      "Mobile and TV builds are distinguished in reports using an app variant label (mobile or tv). We do not use Firebase Analytics to show ads inside NG Anime.",
+      "We use Firebase Analytics (Google) in the PankoBite mobile and Android TV apps to measure aggregate product usage, such as first opens (installs), active users, session duration, screens viewed, and app version. This helps us understand how the apps are used and improve them. Analytics does not require sign-in and is separate from your on-device watch history and lists.",
+      "Mobile and TV builds are distinguished in reports using an app variant label (mobile or tv). We do not use Firebase Analytics to show ads inside PankoBite.",
     ],
   },
   {
@@ -59,14 +59,14 @@ export const privacyPolicySections: LegalSection[] = [
     id: "no-sale",
     title: "7. We do not sell your personal information",
     paragraphs: [
-      "We do not sell, rent, or trade personal information to data brokers. We do not run in-app advertising networks in NG Anime as distributed by us. Firebase Analytics (sections 4 and 6) is used for product metrics, not to serve third-party ads in the app or on this site.",
+      "We do not sell, rent, or trade personal information to data brokers. We do not run in-app advertising networks in PankoBite as distributed by us. Firebase Analytics (sections 4 and 6) is used for product metrics, not to serve third-party ads in the app or on this site.",
     ],
   },
   {
     id: "children",
     title: "8. Children",
     paragraphs: [
-      "NG Anime is not directed at children under 13 (or the minimum age required in your region). We do not knowingly collect personal information from children. If you believe a child has provided us personal information, contact us and we will take reasonable steps to delete it.",
+      "PankoBite is not directed at children under 13 (or the minimum age required in your region). We do not knowingly collect personal information from children. If you believe a child has provided us personal information, contact us and we will take reasonable steps to delete it.",
     ],
   },
   {

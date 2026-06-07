@@ -37,7 +37,7 @@ export function SiteFooter() {
         </div>
       </div>
       <div className="site-container site-footer-base">
-        <span className="site-mono">© 2026 NG ANIME · NG-BRAND-01</span>
+        <span className="site-mono">© 2026 PANKOBITE · PB-BRAND-01</span>
         <span className="site-mono">MADE WITH 朱 INK</span>
       </div>
     </footer>

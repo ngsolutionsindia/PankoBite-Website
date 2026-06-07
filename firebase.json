@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "site": "nganimeoffical",
+    "site": "pankobite",
     "public": "dist",
     "ignore": [
       "firebase.json",

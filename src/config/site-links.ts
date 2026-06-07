@@ -1,16 +1,16 @@
-/** Keep in sync with NgAnime/mobile & tv build.gradle.kts defaultConfig. */
+/** Keep in sync with PankoBite/mobile & tv build.gradle.kts defaultConfig. */
 export const appMeta = {
-  name: "NG Anime",
-  packageId: "com.ngsolutions.nganime",
+  name: "PankoBite",
+  packageId: "com.pankobite.app",
   versionName: "1.1",
   versionCode: 2,
   minAndroid: "Android 9+",
   minApi: 28,
 } as const
 
-/** Public APK host — ngsolutionsindia/NGAnime-releases (see scripts/create-github-release.ps1). */
+/** Public APK host — ngsolutionsindia/PankoBite-releases (see scripts/create-github-release.ps1). */
 const apkReleaseTag = `v${appMeta.versionName}`
-const apkReleaseBase = `https://github.com/ngsolutionsindia/NGAnime-releases/releases/download/${apkReleaseTag}`
+const apkReleaseBase = `https://github.com/ngsolutionsindia/PankoBite-releases/releases/download/${apkReleaseTag}`
 
 export const siteLinks = {
   apkTv: `${apkReleaseBase}/tv-release.apk`,

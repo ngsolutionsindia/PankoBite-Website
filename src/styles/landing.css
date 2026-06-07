@@ -1,4 +1,4 @@
-/* NG Anime marketing page — layout from sample/landing.html, colors via theme tokens only */
+/* PankoBite marketing page — layout from sample/landing.html, colors via theme tokens only */
 
 :root {
   --site-type-scale: 0.8;
@@ -16,9 +16,8 @@
   flex-shrink: 1;
 }
 
-.site-wordmark {
-  font-size: calc(var(--logo-size, 26px) * var(--site-type-scale));
-  white-space: nowrap;
+.site-wordmark-image {
+  width: auto;
 }
 
 /* Responsive device mockup scales (no fixed px widths in components) */
@@ -1221,16 +1220,11 @@
     font-size: calc(14px * var(--site-type-scale));
   }
 
-  .site-wordmark-stamp {
-    transform: scale(0.72);
-    transform-origin: left center;
-  }
-
-  .site-wordmark {
-    font-size: min(
-      calc(var(--logo-size, 26px) * var(--site-type-scale)),
-      calc(20px * var(--site-type-scale))
-    );
+  .site-wordmark-image {
+    height: min(
+      calc(var(--logo-size, 26px) * 1.85),
+      calc(40px * var(--site-type-scale))
+    ) !important;
   }
 
   .site-feature-grid {

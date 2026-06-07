@@ -6,7 +6,7 @@ export function FeaturesSection() {
       <div className="site-container">
         <div className="site-sec-head">
           <span className="site-eyebrow site-eyebrow--accent">
-            WHY NG ANIME · 特徴
+            WHY PANKOBITE · 特徴
           </span>
           <h2 className="site-sec-title">
             Designed like a manga.

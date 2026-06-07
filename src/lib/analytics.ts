@@ -19,9 +19,9 @@ export const appDownloadEventNames = {
 } as const satisfies Record<AppDownloadVariant, string>
 
 const routeTitles: Record<AppRoute, string> = {
-  home: "NG Anime — Home",
-  privacy: "NG Anime — Privacy Policy",
-  terms: "NG Anime — Terms of Service",
+  home: "PankoBite — Home",
+  privacy: "PankoBite — Privacy Policy",
+  terms: "PankoBite — Terms of Service",
 }
 
 let ready = false

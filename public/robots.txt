@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# APK binaries — no need to crawl
+Disallow: /downloads/
+
+Sitemap: https://pankobite.web.app/sitemap.xml

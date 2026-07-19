@@ -17,9 +17,7 @@ export function LegalPageShell({ children }: LegalPageShellProps) {
             <ArrowLeft className="size-4" aria-hidden />
             Home
           </a>
-          <a href="/" aria-label="PankoBite home">
-            <WordLogo size={22} />
-          </a>
+          <WordLogo size={22} />
           <nav className="legal-page-links" aria-label="Legal documents">
             <a href="/terms">Terms</a>
             <a href="/privacy">Privacy</a>

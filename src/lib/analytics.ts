@@ -1,5 +1,6 @@
 import { logEvent } from "firebase/analytics"
 
+import { analyticsTitleForRoute } from "@/config/seo"
 import { appMeta } from "@/config/site-links"
 import { getFirebaseAnalytics, initFirebaseAnalytics } from "@/lib/firebase"
 import type { AppRoute } from "@/lib/routes"
@@ -17,12 +18,6 @@ export const appDownloadEventNames = {
   tv: "app_download_tv",
   mobile: "app_download_mobile",
 } as const satisfies Record<AppDownloadVariant, string>
-
-const routeTitles: Record<AppRoute, string> = {
-  home: "PankoBite — Home",
-  privacy: "PankoBite — Privacy Policy",
-  terms: "PankoBite — Terms of Service",
-}
 
 let ready = false
 
@@ -52,7 +47,7 @@ export async function trackPageView(route: AppRoute) {
 
   const pagePath = route === "home" ? "/" : `/${route}`
   logEvent(analytics, "page_view", {
-    page_title: routeTitles[route],
+    page_title: analyticsTitleForRoute(route),
     page_location: `${globalThis.location.origin}${pagePath}`,
     page_path: pagePath,
   })

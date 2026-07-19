@@ -14,7 +14,9 @@ function MarqueeCard({
     <div className="site-marquee-card" style={showGradientStyle(showId)}>
       <img
         src={poster}
-        alt={title}
+        alt={`${title} anime poster`}
+        width={200}
+        height={300}
         className="site-marquee-card-img"
         loading="lazy"
         decoding="async"

@@ -1,5 +1,6 @@
 import type { LucideIcon } from "lucide-react"
 
+import { legalMeta } from "@/config/legal-meta"
 import { apkDownloads, appMeta } from "@/config/site-links"
 import {
   Captions,
@@ -230,13 +231,22 @@ export const footerColumns = [
       { label: "Privacy", href: "/privacy" },
     ],
   },
+  {
+    title: "Contact",
+    links: [
+      {
+        label: "Share feedback",
+        href: `mailto:${legalMeta.feedbackEmail}?subject=${encodeURIComponent("PankoBite Feedback")}`,
+      },
+    ],
+  },
 ] as const
 
 export const tvDetailScreen = {
   src: "/screenshots/tv-animedetail.png",
   width: 1920,
   height: 1080,
-  alt: "Android TV — Anime detail & episodes",
+  alt: "PankoBite Android TV anime detail page with episode list",
   caption: "ANDROID TV · DETAIL",
 } as const
 
@@ -246,27 +256,27 @@ export const mobileScreens = [
     src: "/screenshots/mobile-home.png",
     width: 1344,
     height: 2992,
-    alt: "Mobile — Home",
+    alt: "PankoBite mobile home with curated anime rows",
   },
   {
     label: "SEARCH",
     src: "/screenshots/mobile-search.png",
     width: 1344,
     height: 2992,
-    alt: "Mobile — Search",
+    alt: "PankoBite mobile search results for anime titles",
   },
   {
     label: "DETAIL",
     src: "/screenshots/mobile-animedetail.png",
     width: 1344,
     height: 2992,
-    alt: "Mobile — Anime detail",
+    alt: "PankoBite mobile anime detail with play and episodes",
   },
   {
     label: "SCHEDULE",
     src: "/screenshots/mobile-schedule.png",
     width: 1344,
     height: 2992,
-    alt: "Mobile — Weekly schedule",
+    alt: "PankoBite mobile weekly anime release schedule",
   },
 ] as const

@@ -35,14 +35,17 @@ export function HeroSection() {
             </span>
           </div>
           <h1 className="site-hero-title">
-            Every series.
-            <br />
-            One <em>ink-clean</em> app.
+            <span className="site-hero-brand">PankoBite</span>
+            <span className="site-hero-tagline">
+              Every series.
+              <br />
+              One <em>ink-clean</em> app.
+            </span>
           </h1>
           <p className="site-hero-sub">
-            Thousands of subbed & dubbed titles, a manga-crafted interface, and
-            your watch history that follows you from the big screen to your
-            pocket. Built for Android TV remotes and phones alike.
+            PankoBite is the free anime streaming app for Android TV and mobile —
+            thousands of subbed & dubbed titles, a manga-crafted interface, and
+            watch history that follows you from the big screen to your pocket.
           </p>
           <div className="site-hero-ctas">
             <StoreBadge
@@ -80,12 +83,13 @@ export function HeroSection() {
           >
             <img
               src="/screenshots/tv-home.png"
-              alt="Android TV — Home"
+              alt="PankoBite on Android TV showing the anime home browse screen"
               width={1920}
               height={1080}
               className="site-device-screenshot"
               loading="eager"
               decoding="async"
+              fetchPriority="high"
             />
           </ScaledFrame>
           <div className="site-hero-phone">
@@ -98,7 +102,7 @@ export function HeroSection() {
             >
               <img
                 src="/screenshots/mobile-home.png"
-                alt="Mobile — Home"
+                alt="PankoBite mobile app home screen with anime recommendations"
                 width={1344}
                 height={2992}
                 className="site-device-screenshot"

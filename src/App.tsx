@@ -1,10 +1,12 @@
 import { useEffect, useSyncExternalStore } from "react"
 
 import { trackPageView } from "@/lib/analytics"
+import { applyDocumentMeta } from "@/lib/document-meta"
 
 import { SiteFooter } from "@/components/layout/SiteFooter"
 import { SiteHeader } from "@/components/layout/SiteHeader"
 import { CtaSection } from "@/components/landing/CtaSection"
+import { FeedbackSection } from "@/components/landing/FeedbackSection"
 import { FeaturesSection } from "@/components/landing/FeaturesSection"
 import { HeroSection } from "@/components/landing/HeroSection"
 import { LibrarySection } from "@/components/landing/LibrarySection"
@@ -42,6 +44,7 @@ function LandingPage() {
         <ScreensSection />
         <PlatformsSection />
         <CtaSection />
+        <FeedbackSection />
       </main>
       <SiteFooter />
     </>
@@ -57,6 +60,7 @@ export function App() {
   const route = pathnameToRoute(pathname)
 
   useEffect(() => {
+    applyDocumentMeta(route)
     void trackPageView(route)
   }, [route])
 
